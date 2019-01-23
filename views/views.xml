@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="sph_mis.list">
+      <field name="name">sph_mis list</field>
+      <field name="model">sph_mis.sph_mis</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="sph_mis.action_window">
+      <field name="name">sph_mis window</field>
+      <field name="res_model">sph_mis.sph_mis</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="sph_mis.action_server">
+      <field name="name">sph_mis server</field>
+      <field name="model_id" ref="model_sph_mis_sph_mis"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="sph_mis" id="sph_mis.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="sph_mis.menu_1" parent="sph_mis.menu_root"/>
+    <menuitem name="Menu 2" id="sph_mis.menu_2" parent="sph_mis.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="sph_mis.menu_1_list" parent="sph_mis.menu_1"
+              action="sph_mis.action_window"/>
+    <menuitem name="Server to list" id="sph_mis" parent="sph_mis.menu_2"
+              action="sph_mis.action_server"/>
+    -->
+  </data>
+</odoo>
