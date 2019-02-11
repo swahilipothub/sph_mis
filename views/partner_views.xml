@@ -101,6 +101,18 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
+                <page name="sales_purchases" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </page>
+                <page name="accounting" position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </page>
+                <field name="company_type"  position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
+                <field name="parent_id"  position="attributes">
+                    <attribute name="invisible">True</attribute>
+                </field>
                 <notebook position="inside">
                     <page string="Membership">
                         <group>
