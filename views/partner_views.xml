@@ -101,6 +101,18 @@
             <field name="model">res.partner</field>
             <field name="inherit_id" ref="base.view_partner_form"/>
             <field name="arch" type="xml">
+                <xpath
+                    expr="//field[@name='vat']" position="after">
+                    <field name="gender"/>
+                </xpath>
+                <xpath
+                    expr="//field[@name='vat']" position="after">
+                    <field name="date_of_birth"/>
+                </xpath>
+                <xpath
+                    expr="//field[@name='vat']" position="after">
+                    <field name="interests"/>
+                </xpath>
                 <page name="sales_purchases" position="attributes">
                     <attribute name="invisible">True</attribute>
                 </page>
@@ -114,6 +126,13 @@
                     <attribute name="invisible">True</attribute>
                 </field>
                 <notebook position="inside">
+                    <page string="Next of Kin">
+                        <group>
+                            <field name="nok_name"/>
+                            <field name="nok_relation"/>
+                            <field name="nok_mobile" />
+                        </group>
+                    </page>
                     <page string="Membership">
                         <group>
                             <group>

@@ -36,6 +36,14 @@ class Partner(models.Model):
     membership_cancel = fields.Date(compute='_compute_membership_cancel',
         string ='Cancel Membership Date', store=True,
         help="Date on which membership has been cancelled")
+    date_of_birth = fields.Date('Date of Birth')
+    gender = fields.Selection([('male', 'Male'), ('female', 'Female')], string='Gender')
+    interests = fields.Text('Interests')
+    function = fields.Char('Profession')
+    nok_name = fields.Char('Next of Kin Name')
+    nok_relation = fields.Selection([
+        ('parent', 'Parent'), ('sibling', 'Sibling'), ('guardian', 'Guardian')])
+    nok_mobile = fields.Char('Next of Kin contact')
 
     @api.depends('member_lines.account_invoice_line.invoice_id.state',
                  'member_lines.account_invoice_line.invoice_id.invoice_line_ids',
